@@ -9,9 +9,8 @@
   <br>
 </h1>
 
-
-This plugin is a port of the [Atom File Icons](https://github.com/file-icons/atom) for Google Chrome and Mozilla
-Firefox.
+The repository maintains builds of [a-file-icon-web](https://github.com/mallowigi/a-file-icon-web) for Firefox.
+You can download the artifacts in the [releases section](https://github.com/Nerixyz/a-file-icon-web/releases).
 
 It replaces the icons and folder icons with better suited icons, related to the file type, framework or language.
 
@@ -23,13 +22,13 @@ Works on the following websites:
 - [Gitee](https://gitee.com)
 - [Azure](https://dev.azure.com)
 
+## Firefox Extension
+
+Download in the [releases section](https://github.com/Nerixyz/a-file-icon-web/releases).
+
 ## Chrome Extension
 
-<https://chrome.google.com/webstore/detail/atom-file-icons-web/pljfkbaipkidhmaljaaakibigbcmmpnc>
-
-## Firefox Extension (Not updated)
-
-<https://addons.mozilla.org/en-US/firefox/addon/atom-file-icons-web/>
+See <https://github.com/mallowigi/a-file-icon-web>
 
 ## Features
 
@@ -44,35 +43,37 @@ Works on the following websites:
     - Icon size: Change the icon size on the fly
     - Monochrome: Use monochrome icons
 
-## File Icons
+
+<details>
+<summary>File Icons</summary>
 
 ![File Icons](https://raw.githubusercontent.com/mallowigi/iconGenerator/master/assets/files.png)
 
-## Folder Icons
+</details>
+
+<details>
+<summary>Folder Icons</summary>
 
 ![Folder Icons](https://raw.githubusercontent.com/mallowigi/iconGenerator/master/assets/folders.png)
 
-## Build
+</details>
+
+## Building for Firefox
+
+Make sure you cloned the submodule `iconGenerator`.
 
 ```
-git clone https://github.com/mallowigi/iconGenerator.git
 npm install && cd iconGenerator && npm install
 npm run build
 ```
 
-## Scripts
-
-- `build`: Runs `clean`, `convert`, `public` and build the source files
-- `dev`: Runs `build` with watch
-- `release`: Build the extension for Chrome
-- `webext`: Build the extension for Firefox
-- `firefox`: Generate Firefox's Manifest and run `build` and `webext`
-- `chrome`: Generate Chrome's Manifest and run `build` and `webext`
+The extension will be in `build/firefox-mv2-prod.zip`.
 
 ## Credits
 
 Special credits to:
 
+- [mallowigi](https://github.com/mallowigi) for creating and maintaining [a-file-icon-web](https://github.com/mallowigi/a-file-icon-web).
 - The [Material Theme UI plugin](https://www.material-theme.com) for the implementation
 - [Atom File Icons](https://github.com/file-icons/atom)
   and [Sublime Text A File Icon](https://github.com/SublimeText/AFileIcon) for the idea

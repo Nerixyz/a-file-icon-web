@@ -1,0 +1,52 @@
+{
+  "author": "Elior Boukhobza (mallowigi)",
+  "browser_action": {
+    "default_icon": "icon128.png",
+    "default_title": "Atom File Icons"
+  },
+  "content_scripts": [
+    {
+      "css": [
+        "public/global.css"
+      ],
+      "js": [
+        "public/bundle.js"
+      ],
+      "matches": [
+        "http://github.com/*",
+        "https://github.com/*",
+        "http://bitbucket.org/*",
+        "https://bitbucket.org/*",
+        "http://gitlab.com/*",
+        "https://gitlab.com/*",
+        "http://gitee.com/*",
+        "https://gitee.com/*"
+      ]
+    }
+  ],
+  "description": "Changes GitHub, GitLab, Gitee and BitBucket file icons according to their extension or framework",
+  "homepage_url": "https://www.material-theme.com",
+  "icons": {
+    "128": "icon128.png",
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png"
+  },
+  "manifest_version": 2,
+  "name": "Atom File Icons Web",
+  "permissions": [
+    "http://github.com/*",
+    "https://github.com/*",
+    "http://bitbucket.org/*",
+    "https://bitbucket.org/*",
+    "http://gitlab.com/*",
+    "https://gitlab.com/*",
+    "http://gitee.com/*",
+    "https://gitee.com/*"
+  ],
+  "short_name": "Atom File Icons Web",
+  "version": "7.0.0",
+  "web_accessible_resources": [
+    "public/icons/**/*"
+  ]
+}

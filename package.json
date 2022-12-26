@@ -27,13 +27,7 @@
     "predev": "npm run convert",
     "dev": "npm run plasmo:dev",
     "plasmo:dev": "plasmo dev",
-    "plasmo:build": "plasmo build --zip",
-    "release": "gulp release",
-    "webext": "web-ext build --overwrite-dest",
-    "prefirefox": "npm run build && cp firefox/manifest.json .",
-    "firefox": "npm run webext",
-    "prechrome": "npm run build && cp chrome/manifest.json .",
-    "chrome": "npm run release"
+    "plasmo:build": "plasmo build --zip --target=firefox-mv2"
   },
   "devDependencies": {
     "@babel/core": "7.20.7",
@@ -68,7 +62,7 @@
   "manifest": {
     "name": "Atom Material Icons",
     "description": "Atom Material Icons for Web (GitHub, BitBucket, Gitee, Azure and GitLab)",
-    "author": "Elior Boukhobza (Mallowigi)",
+    "author": "Nerixyz",
     "homepage_url": "https://www.material-theme.com",
     "permissions": [
       "storage"
