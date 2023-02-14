@@ -21,12 +21,12 @@
   },
   "scripts": {
     "preconvert": "rimraf public",
-    "convert": "npm --prefix iconGenerator run convert",
+    "convert": "pnpm --prefix iconGenerator run convert",
     "postconvert": "gulp prepare",
-    "prebuild": "npm run convert",
-    "build": "npm run plasmo:build",
-    "predev": "npm run convert",
-    "dev": "npm run plasmo:dev",
+    "prebuild": "pnpm run convert",
+    "build": "pnpm run plasmo:build",
+    "predev": "pnpm run convert",
+    "dev": "pnpm run plasmo:dev",
     "plasmo:dev": "plasmo dev",
     "plasmo:build": "plasmo build --zip --target=firefox-mv2"
   },
@@ -79,7 +79,12 @@
       "https://gitee.com/*",
       "http://dev.azure.com/*",
       "https://dev.azure.com/*"
-    ]
+    ],
+    "background": {
+      "scripts": [
+        "../src/__dummy_background.js"
+      ]
+    }
   },
   "peerDependencies": {
     "xml2json-cli": "1.1.1"
